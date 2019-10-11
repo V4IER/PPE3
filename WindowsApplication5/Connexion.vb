@@ -8,7 +8,7 @@
     Dim connString As String
     Dim donnee As Collection
 
-    Private Sub Submit_Click(sender As System.Object, e As System.EventArgs) Handles Submit.Click
+    Public Sub Submit_Click(sender As System.Object, e As System.EventArgs) Handles Submit.Click
         'Dim hostAddress = "10.0.122.107"
         'Dim serviceName = "ORA07"
         'Dim userId = "U_Mesguen"
@@ -32,7 +32,7 @@
 
         If donnee.Count > 0 Then
             Me.Hide()
-            choixChauffeur.Show()
+            AC13.Show()
         Else
             MessageBox.Show("Connexion Échouée")
         End If
