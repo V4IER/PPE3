@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="MESGUEN" targetNamespace="http://tempuri.org/MESGUEN.xsd" xmlns:mstns="http://tempuri.org/MESGUEN.xsd" xmlns="http://tempuri.org/MESGUEN.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -365,7 +365,7 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AC11TableAdapter" GeneratorDataComponentClassName="AC11TableAdapter" Name="AC11" UserDataComponentName="AC11TableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
@@ -393,7 +393,7 @@ FROM            U_MESGUEN.AC11</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+  <xs:element name="MESGUEN" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MESGUEN" msprop:Generator_UserDSName="MESGUEN">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="CHAUFFEUR" msprop:Generator_TableClassName="CHAUFFEURDataTable" msprop:Generator_TableVarName="tableCHAUFFEUR" msprop:Generator_RowChangedName="CHAUFFEURRowChanged" msprop:Generator_TablePropName="CHAUFFEUR" msprop:Generator_RowDeletingName="CHAUFFEURRowDeleting" msprop:Generator_RowChangingName="CHAUFFEURRowChanging" msprop:Generator_RowEvHandlerName="CHAUFFEURRowChangeEventHandler" msprop:Generator_RowDeletedName="CHAUFFEURRowDeleted" msprop:Generator_RowClassName="CHAUFFEURRow" msprop:Generator_UserTableName="CHAUFFEUR" msprop:Generator_RowEvArgName="CHAUFFEURRowChangeEvent">
@@ -783,7 +783,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="AC11" msprop:Generator_TableClassName="AC11DataTable" msprop:Generator_TableVarName="tableAC11" msprop:Generator_TablePropName="AC11" msprop:Generator_RowDeletingName="AC11RowDeleting" msprop:Generator_RowChangingName="AC11RowChanging" msprop:Generator_RowEvHandlerName="AC11RowChangeEventHandler" msprop:Generator_RowDeletedName="AC11RowDeleted" msprop:Generator_UserTableName="AC11" msprop:Generator_RowChangedName="AC11RowChanged" msprop:Generator_RowEvArgName="AC11RowChangeEvent" msprop:Generator_RowClassName="AC11Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TRNNUM" msprop:Generator_ColumnVarNameInTable="columnTRNNUM" msprop:Generator_ColumnPropNameInRow="TRNNUM" msprop:Generator_ColumnPropNameInTable="TRNNUMColumn" msprop:Generator_UserColumnName="TRNNUM">
