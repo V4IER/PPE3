@@ -32,7 +32,7 @@
 
         If donnee.Count > 0 Then
             Me.Hide()
-            AC11.Show()
+            AC13.Show()
         Else
             MessageBox.Show("Connexion Échouée")
         End If
@@ -40,7 +40,4 @@
         myConnection.Close()
     End Sub
 
-    Private Sub Connexion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
