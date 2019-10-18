@@ -5,4 +5,9 @@
         Me.DataTable3TableAdapter.Fill(Me.DataSet1.DataTable3)
 
     End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Application.Restart()
+        Me.Refresh()
+    End Sub
 End Class
