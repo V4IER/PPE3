@@ -31,14 +31,17 @@ Partial Class AC13
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApplication5.DataSet1()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.DataSet1 = New WindowsApplication5.DataSet1()
-        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable2TableAdapter = New WindowsApplication5.DataSet1TableAdapters.DataTable2TableAdapter()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataTable3BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataTable3TableAdapter = New WindowsApplication5.DataSet1TableAdapters.DataTable3TableAdapter()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable3BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -107,7 +110,7 @@ Partial Class AC13
         '
         'ComboBox1
         '
-        Me.ComboBox1.DataSource = Me.DataTable2BindingSource
+        Me.ComboBox1.DataSource = Me.DataTable3BindingSource
         Me.ComboBox1.DisplayMember = "LIEUNOM"
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(134, 87)
@@ -116,9 +119,19 @@ Partial Class AC13
         Me.ComboBox1.TabIndex = 7
         Me.ComboBox1.ValueMember = "LIEUNOM"
         '
+        'DataTable2BindingSource
+        '
+        Me.DataTable2BindingSource.DataMember = "DataTable2"
+        Me.DataTable2BindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(134, 138)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(134, 139)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 8
@@ -138,19 +151,18 @@ Partial Class AC13
         Me.RichTextBox1.TabIndex = 10
         Me.RichTextBox1.Text = ""
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataTable2BindingSource
-        '
-        Me.DataTable2BindingSource.DataMember = "DataTable2"
-        Me.DataTable2BindingSource.DataSource = Me.DataSet1
-        '
         'DataTable2TableAdapter
         '
         Me.DataTable2TableAdapter.ClearBeforeFill = True
+        '
+        'DataTable3BindingSource
+        '
+        Me.DataTable3BindingSource.DataMember = "DataTable3"
+        Me.DataTable3BindingSource.DataSource = Me.DataSet1
+        '
+        'DataTable3TableAdapter
+        '
+        Me.DataTable3TableAdapter.ClearBeforeFill = True
         '
         'AC13
         '
@@ -170,8 +182,9 @@ Partial Class AC13
         Me.Controls.Add(Me.Label1)
         Me.Name = "AC13"
         Me.Text = "AC13"
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable3BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -190,4 +203,6 @@ Partial Class AC13
     Friend WithEvents DataSet1 As WindowsApplication5.DataSet1
     Friend WithEvents DataTable2BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents DataTable2TableAdapter As WindowsApplication5.DataSet1TableAdapters.DataTable2TableAdapter
+    Friend WithEvents DataTable3BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DataTable3TableAdapter As WindowsApplication5.DataSet1TableAdapters.DataTable3TableAdapter
 End Class
