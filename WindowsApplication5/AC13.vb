@@ -16,6 +16,10 @@
         Dim monLieu As String
         monLieu = Me.AC13_ComboBox_Lieu.SelectedValue
 
+        Dim monLieuSQL As Integer
+        monLieuSQL = "Select LIEUID from LIEU WHERE LIEUNOM = " & monLieu
+        MsgBox(monLieuSQL)
+
         'Récupère la première date que l'utilisateur entre
         Dim monRDV As Date
         monRDV = Me.AC13_DateTimePicker_RDV.Value.ToString("dd/MM/yy H:mm:s")
@@ -31,6 +35,8 @@
         'Récupère le commentaire de l'utilisateur
         Dim monCommentaire As String
         monCommentaire = Me.AC13_RichTextBox_Commentaire.Text
+
+
 
     End Sub
 End Class
