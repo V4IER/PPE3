@@ -4760,6 +4760,8 @@ Partial Public Class DataSet1
         
         Private columnLIEUNOM As Global.System.Data.DataColumn
         
+        Private columnLIEUID As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -4804,6 +4806,14 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property LIEUIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLIEUID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4840,12 +4850,18 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddDataTable3Row(ByVal LIEUNOM As String) As DataTable3Row
+        Public Overloads Function AddDataTable3Row(ByVal LIEUNOM As String, ByVal LIEUID As String) As DataTable3Row
             Dim rowDataTable3Row As DataTable3Row = CType(Me.NewRow,DataTable3Row)
-            Dim columnValuesArray() As Object = New Object() {LIEUNOM}
+            Dim columnValuesArray() As Object = New Object() {LIEUNOM, LIEUID}
             rowDataTable3Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDataTable3Row)
             Return rowDataTable3Row
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByLIEUID(ByVal LIEUID As String) As DataTable3Row
+            Return CType(Me.Rows.Find(New Object() {LIEUID}),DataTable3Row)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4866,6 +4882,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnLIEUNOM = MyBase.Columns("LIEUNOM")
+            Me.columnLIEUID = MyBase.Columns("LIEUID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4873,7 +4890,13 @@ Partial Public Class DataSet1
         Private Sub InitClass()
             Me.columnLIEUNOM = New Global.System.Data.DataColumn("LIEUNOM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLIEUNOM)
+            Me.columnLIEUID = New Global.System.Data.DataColumn("LIEUID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLIEUID)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnLIEUID}, true))
             Me.columnLIEUNOM.MaxLength = 32
+            Me.columnLIEUID.AllowDBNull = false
+            Me.columnLIEUID.Unique = true
+            Me.columnLIEUID.MaxLength = 32
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6645,6 +6668,17 @@ Partial Public Class DataSet1
             End Get
             Set
                 Me(Me.tableDataTable3.LIEUNOMColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property LIEUID() As String
+            Get
+                Return CType(Me(Me.tableDataTable3.LIEUIDColumn),String)
+            End Get
+            Set
+                Me(Me.tableDataTable3.LIEUIDColumn) = value
             End Set
         End Property
         
@@ -10268,6 +10302,7 @@ Namespace DataSet1TableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "DataTable3"
             tableMapping.ColumnMappings.Add("LIEUNOM", "LIEUNOM")
+            tableMapping.ColumnMappings.Add("LIEUID", "LIEUID")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -10284,7 +10319,7 @@ Namespace DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        LIEUNOM"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            U_MESGUEN.LIEU"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY LIEUNOM"
+            Me._commandCollection(0).CommandText = "SELECT        LIEUNOM, LIEUID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            U_MESGUEN.LIEU"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY LIEUNOM"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
