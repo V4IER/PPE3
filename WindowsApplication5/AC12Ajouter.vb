@@ -22,8 +22,8 @@
         unVehicule = Me.boxVehicule.SelectedValue
         uneRemorque = Me.boxRemorque.SelectedValue
         uneDtePEC = Me.DateTimePicker1.Value.ToString
-        unCommentaire = Me.boxCommentaire.SelectedText
+        unCommentaire = Me.boxCommentaire.Text
 
-        MsgBox(maDte, )
+        MsgBox(maDte & " ~ " & monChauffeur & " ~ " & unVehicule & " ~ " & uneRemorque & " ~ " & uneDtePEC & " ~ " & unCommentaire)
     End Sub
 End Class
