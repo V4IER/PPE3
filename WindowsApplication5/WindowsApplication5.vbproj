@@ -86,6 +86,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AC11ajout.Designer.vb">
+      <DependentUpon>AC11ajout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AC11ajout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Lieu.vb" />
     <Compile Include="Connexion.Designer.vb">
       <DependentUpon>Connexion.vb</DependentUpon>
@@ -121,6 +127,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AC11.resx">
       <DependentUpon>AC11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AC11ajout.resx">
+      <DependentUpon>AC11ajout.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.vb</DependentUpon>
