@@ -388,6 +388,57 @@ FROM            U_MESGUEN.AC11</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AC12CHFTableAdapter" GeneratorDataComponentClassName="AC12CHFTableAdapter" Name="AC12CHF" UserDataComponentName="AC12CHFTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        CHFNOM
+FROM            U_MESGUEN.CHAUFFEUR</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CHFNOM" DataSetColumn="CHFNOM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AC12INMMATTableAdapter" GeneratorDataComponentClassName="AC12INMMATTableAdapter" Name="AC12INMMAT" UserDataComponentName="AC12INMMATTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        VEHIMMAT
+FROM            U_MESGUEN.VEHICULE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="VEHIMMAT" DataSetColumn="VEHIMMAT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AC12REMMATTableAdapter" GeneratorDataComponentClassName="AC12REMMATTableAdapter" Name="AC12REMMAT" UserDataComponentName="AC12REMMATTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        REMMAT
+FROM            U_MESGUEN.REMORQUE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="REMMAT" DataSetColumn="REMMAT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -396,7 +447,7 @@ FROM            U_MESGUEN.AC11</CommandText>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CHAUFFEUR" msprop:Generator_TableClassName="CHAUFFEURDataTable" msprop:Generator_TableVarName="tableCHAUFFEUR" msprop:Generator_RowChangedName="CHAUFFEURRowChanged" msprop:Generator_TablePropName="CHAUFFEUR" msprop:Generator_RowDeletingName="CHAUFFEURRowDeleting" msprop:Generator_RowChangingName="CHAUFFEURRowChanging" msprop:Generator_RowEvHandlerName="CHAUFFEURRowChangeEventHandler" msprop:Generator_RowDeletedName="CHAUFFEURRowDeleted" msprop:Generator_RowClassName="CHAUFFEURRow" msprop:Generator_UserTableName="CHAUFFEUR" msprop:Generator_RowEvArgName="CHAUFFEURRowChangeEvent">
+        <xs:element name="CHAUFFEUR" msprop:Generator_TableClassName="CHAUFFEURDataTable" msprop:Generator_TableVarName="tableCHAUFFEUR" msprop:Generator_TablePropName="CHAUFFEUR" msprop:Generator_RowDeletingName="CHAUFFEURRowDeleting" msprop:Generator_RowChangingName="CHAUFFEURRowChanging" msprop:Generator_RowEvHandlerName="CHAUFFEURRowChangeEventHandler" msprop:Generator_RowDeletedName="CHAUFFEURRowDeleted" msprop:Generator_UserTableName="CHAUFFEUR" msprop:Generator_RowChangedName="CHAUFFEURRowChanged" msprop:Generator_RowEvArgName="CHAUFFEURRowChangeEvent" msprop:Generator_RowClassName="CHAUFFEURRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CHFID" msprop:Generator_ColumnVarNameInTable="columnCHFID" msprop:Generator_ColumnPropNameInRow="CHFID" msprop:Generator_ColumnPropNameInTable="CHFIDColumn" msprop:Generator_UserColumnName="CHFID">
@@ -437,7 +488,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CLIENT" msprop:Generator_TableClassName="CLIENTDataTable" msprop:Generator_TableVarName="tableCLIENT" msprop:Generator_RowChangedName="CLIENTRowChanged" msprop:Generator_TablePropName="CLIENT" msprop:Generator_RowDeletingName="CLIENTRowDeleting" msprop:Generator_RowChangingName="CLIENTRowChanging" msprop:Generator_RowEvHandlerName="CLIENTRowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTRowDeleted" msprop:Generator_RowClassName="CLIENTRow" msprop:Generator_UserTableName="CLIENT" msprop:Generator_RowEvArgName="CLIENTRowChangeEvent">
+        <xs:element name="CLIENT" msprop:Generator_TableClassName="CLIENTDataTable" msprop:Generator_TableVarName="tableCLIENT" msprop:Generator_TablePropName="CLIENT" msprop:Generator_RowDeletingName="CLIENTRowDeleting" msprop:Generator_RowChangingName="CLIENTRowChanging" msprop:Generator_RowEvHandlerName="CLIENTRowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTRowDeleted" msprop:Generator_UserTableName="CLIENT" msprop:Generator_RowChangedName="CLIENTRowChanged" msprop:Generator_RowEvArgName="CLIENTRowChangeEvent" msprop:Generator_RowClassName="CLIENTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CLIID" msprop:Generator_ColumnVarNameInTable="columnCLIID" msprop:Generator_ColumnPropNameInRow="CLIID" msprop:Generator_ColumnPropNameInTable="CLIIDColumn" msprop:Generator_UserColumnName="CLIID" type="xs:decimal" />
@@ -473,7 +524,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CLIENTS" msprop:Generator_TableClassName="CLIENTSDataTable" msprop:Generator_TableVarName="tableCLIENTS" msprop:Generator_RowChangedName="CLIENTSRowChanged" msprop:Generator_TablePropName="CLIENTS" msprop:Generator_RowDeletingName="CLIENTSRowDeleting" msprop:Generator_RowChangingName="CLIENTSRowChanging" msprop:Generator_RowEvHandlerName="CLIENTSRowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTSRowDeleted" msprop:Generator_RowClassName="CLIENTSRow" msprop:Generator_UserTableName="CLIENTS" msprop:Generator_RowEvArgName="CLIENTSRowChangeEvent">
+        <xs:element name="CLIENTS" msprop:Generator_TableClassName="CLIENTSDataTable" msprop:Generator_TableVarName="tableCLIENTS" msprop:Generator_TablePropName="CLIENTS" msprop:Generator_RowDeletingName="CLIENTSRowDeleting" msprop:Generator_RowChangingName="CLIENTSRowChanging" msprop:Generator_RowEvHandlerName="CLIENTSRowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTSRowDeleted" msprop:Generator_UserTableName="CLIENTS" msprop:Generator_RowChangedName="CLIENTSRowChanged" msprop:Generator_RowEvArgName="CLIENTSRowChangeEvent" msprop:Generator_RowClassName="CLIENTSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDCLIENT" msprop:Generator_ColumnVarNameInTable="columnIDCLIENT" msprop:Generator_ColumnPropNameInRow="IDCLIENT" msprop:Generator_ColumnPropNameInTable="IDCLIENTColumn" msprop:Generator_UserColumnName="IDCLIENT" type="xs:decimal" />
@@ -509,7 +560,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="COMMUNE" msprop:Generator_TableClassName="COMMUNEDataTable" msprop:Generator_TableVarName="tableCOMMUNE" msprop:Generator_RowChangedName="COMMUNERowChanged" msprop:Generator_TablePropName="COMMUNE" msprop:Generator_RowDeletingName="COMMUNERowDeleting" msprop:Generator_RowChangingName="COMMUNERowChanging" msprop:Generator_RowEvHandlerName="COMMUNERowChangeEventHandler" msprop:Generator_RowDeletedName="COMMUNERowDeleted" msprop:Generator_RowClassName="COMMUNERow" msprop:Generator_UserTableName="COMMUNE" msprop:Generator_RowEvArgName="COMMUNERowChangeEvent">
+        <xs:element name="COMMUNE" msprop:Generator_TableClassName="COMMUNEDataTable" msprop:Generator_TableVarName="tableCOMMUNE" msprop:Generator_TablePropName="COMMUNE" msprop:Generator_RowDeletingName="COMMUNERowDeleting" msprop:Generator_RowChangingName="COMMUNERowChanging" msprop:Generator_RowEvHandlerName="COMMUNERowChangeEventHandler" msprop:Generator_RowDeletedName="COMMUNERowDeleted" msprop:Generator_UserTableName="COMMUNE" msprop:Generator_RowChangedName="COMMUNERowChanged" msprop:Generator_RowEvArgName="COMMUNERowChangeEvent" msprop:Generator_RowClassName="COMMUNERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="VILID" msprop:Generator_ColumnVarNameInTable="columnVILID" msprop:Generator_ColumnPropNameInRow="VILID" msprop:Generator_ColumnPropNameInTable="VILIDColumn" msprop:Generator_UserColumnName="VILID">
@@ -529,7 +580,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EMPLOYE" msprop:Generator_TableClassName="EMPLOYEDataTable" msprop:Generator_TableVarName="tableEMPLOYE" msprop:Generator_RowChangedName="EMPLOYERowChanged" msprop:Generator_TablePropName="EMPLOYE" msprop:Generator_RowDeletingName="EMPLOYERowDeleting" msprop:Generator_RowChangingName="EMPLOYERowChanging" msprop:Generator_RowEvHandlerName="EMPLOYERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLOYERowDeleted" msprop:Generator_RowClassName="EMPLOYERow" msprop:Generator_UserTableName="EMPLOYE" msprop:Generator_RowEvArgName="EMPLOYERowChangeEvent">
+        <xs:element name="EMPLOYE" msprop:Generator_TableClassName="EMPLOYEDataTable" msprop:Generator_TableVarName="tableEMPLOYE" msprop:Generator_TablePropName="EMPLOYE" msprop:Generator_RowDeletingName="EMPLOYERowDeleting" msprop:Generator_RowChangingName="EMPLOYERowChanging" msprop:Generator_RowEvHandlerName="EMPLOYERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLOYERowDeleted" msprop:Generator_UserTableName="EMPLOYE" msprop:Generator_RowChangedName="EMPLOYERowChanged" msprop:Generator_RowEvArgName="EMPLOYERowChangeEvent" msprop:Generator_RowClassName="EMPLOYERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EMPLID" msprop:Generator_ColumnVarNameInTable="columnEMPLID" msprop:Generator_ColumnPropNameInRow="EMPLID" msprop:Generator_ColumnPropNameInTable="EMPLIDColumn" msprop:Generator_UserColumnName="EMPLID" type="xs:decimal" />
@@ -585,7 +636,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ETAPE" msprop:Generator_TableClassName="ETAPEDataTable" msprop:Generator_TableVarName="tableETAPE" msprop:Generator_RowChangedName="ETAPERowChanged" msprop:Generator_TablePropName="ETAPE" msprop:Generator_RowDeletingName="ETAPERowDeleting" msprop:Generator_RowChangingName="ETAPERowChanging" msprop:Generator_RowEvHandlerName="ETAPERowChangeEventHandler" msprop:Generator_RowDeletedName="ETAPERowDeleted" msprop:Generator_RowClassName="ETAPERow" msprop:Generator_UserTableName="ETAPE" msprop:Generator_RowEvArgName="ETAPERowChangeEvent">
+        <xs:element name="ETAPE" msprop:Generator_TableClassName="ETAPEDataTable" msprop:Generator_TableVarName="tableETAPE" msprop:Generator_TablePropName="ETAPE" msprop:Generator_RowDeletingName="ETAPERowDeleting" msprop:Generator_RowChangingName="ETAPERowChanging" msprop:Generator_RowEvHandlerName="ETAPERowChangeEventHandler" msprop:Generator_RowDeletedName="ETAPERowDeleted" msprop:Generator_UserTableName="ETAPE" msprop:Generator_RowChangedName="ETAPERowChanged" msprop:Generator_RowEvArgName="ETAPERowChangeEvent" msprop:Generator_RowClassName="ETAPERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TRNNUM" msprop:Generator_ColumnVarNameInTable="columnTRNNUM" msprop:Generator_ColumnPropNameInRow="TRNNUM" msprop:Generator_ColumnPropNameInTable="TRNNUMColumn" msprop:Generator_UserColumnName="TRNNUM">
@@ -643,7 +694,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LIEU" msprop:Generator_TableClassName="LIEUDataTable" msprop:Generator_TableVarName="tableLIEU" msprop:Generator_RowChangedName="LIEURowChanged" msprop:Generator_TablePropName="LIEU" msprop:Generator_RowDeletingName="LIEURowDeleting" msprop:Generator_RowChangingName="LIEURowChanging" msprop:Generator_RowEvHandlerName="LIEURowChangeEventHandler" msprop:Generator_RowDeletedName="LIEURowDeleted" msprop:Generator_RowClassName="LIEURow" msprop:Generator_UserTableName="LIEU" msprop:Generator_RowEvArgName="LIEURowChangeEvent">
+        <xs:element name="LIEU" msprop:Generator_TableClassName="LIEUDataTable" msprop:Generator_TableVarName="tableLIEU" msprop:Generator_TablePropName="LIEU" msprop:Generator_RowDeletingName="LIEURowDeleting" msprop:Generator_RowChangingName="LIEURowChanging" msprop:Generator_RowEvHandlerName="LIEURowChangeEventHandler" msprop:Generator_RowDeletedName="LIEURowDeleted" msprop:Generator_UserTableName="LIEU" msprop:Generator_RowChangedName="LIEURowChanged" msprop:Generator_RowEvArgName="LIEURowChangeEvent" msprop:Generator_RowClassName="LIEURow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LIEUID" msprop:Generator_ColumnVarNameInTable="columnLIEUID" msprop:Generator_ColumnPropNameInRow="LIEUID" msprop:Generator_ColumnPropNameInTable="LIEUIDColumn" msprop:Generator_UserColumnName="LIEUID">
@@ -677,7 +728,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="REMORQUE" msprop:Generator_TableClassName="REMORQUEDataTable" msprop:Generator_TableVarName="tableREMORQUE" msprop:Generator_RowChangedName="REMORQUERowChanged" msprop:Generator_TablePropName="REMORQUE" msprop:Generator_RowDeletingName="REMORQUERowDeleting" msprop:Generator_RowChangingName="REMORQUERowChanging" msprop:Generator_RowEvHandlerName="REMORQUERowChangeEventHandler" msprop:Generator_RowDeletedName="REMORQUERowDeleted" msprop:Generator_RowClassName="REMORQUERow" msprop:Generator_UserTableName="REMORQUE" msprop:Generator_RowEvArgName="REMORQUERowChangeEvent">
+        <xs:element name="REMORQUE" msprop:Generator_TableClassName="REMORQUEDataTable" msprop:Generator_TableVarName="tableREMORQUE" msprop:Generator_TablePropName="REMORQUE" msprop:Generator_RowDeletingName="REMORQUERowDeleting" msprop:Generator_RowChangingName="REMORQUERowChanging" msprop:Generator_RowEvHandlerName="REMORQUERowChangeEventHandler" msprop:Generator_RowDeletedName="REMORQUERowDeleted" msprop:Generator_UserTableName="REMORQUE" msprop:Generator_RowChangedName="REMORQUERowChanged" msprop:Generator_RowEvArgName="REMORQUERowChangeEvent" msprop:Generator_RowClassName="REMORQUERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="REMMAT" msprop:Generator_ColumnVarNameInTable="columnREMMAT" msprop:Generator_ColumnPropNameInRow="REMMAT" msprop:Generator_ColumnPropNameInTable="REMMATColumn" msprop:Generator_UserColumnName="REMMAT">
@@ -714,7 +765,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TOURNEE" msprop:Generator_TableClassName="TOURNEEDataTable" msprop:Generator_TableVarName="tableTOURNEE" msprop:Generator_RowChangedName="TOURNEERowChanged" msprop:Generator_TablePropName="TOURNEE" msprop:Generator_RowDeletingName="TOURNEERowDeleting" msprop:Generator_RowChangingName="TOURNEERowChanging" msprop:Generator_RowEvHandlerName="TOURNEERowChangeEventHandler" msprop:Generator_RowDeletedName="TOURNEERowDeleted" msprop:Generator_RowClassName="TOURNEERow" msprop:Generator_UserTableName="TOURNEE" msprop:Generator_RowEvArgName="TOURNEERowChangeEvent">
+        <xs:element name="TOURNEE" msprop:Generator_TableClassName="TOURNEEDataTable" msprop:Generator_TableVarName="tableTOURNEE" msprop:Generator_TablePropName="TOURNEE" msprop:Generator_RowDeletingName="TOURNEERowDeleting" msprop:Generator_RowChangingName="TOURNEERowChanging" msprop:Generator_RowEvHandlerName="TOURNEERowChangeEventHandler" msprop:Generator_RowDeletedName="TOURNEERowDeleted" msprop:Generator_UserTableName="TOURNEE" msprop:Generator_RowChangedName="TOURNEERowChanged" msprop:Generator_RowEvArgName="TOURNEERowChangeEvent" msprop:Generator_RowClassName="TOURNEERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TRNNUM" msprop:Generator_ColumnVarNameInTable="columnTRNNUM" msprop:Generator_ColumnPropNameInRow="TRNNUM" msprop:Generator_ColumnPropNameInTable="TRNNUMColumn" msprop:Generator_UserColumnName="TRNNUM">
@@ -763,7 +814,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VEHICULE" msprop:Generator_TableClassName="VEHICULEDataTable" msprop:Generator_TableVarName="tableVEHICULE" msprop:Generator_RowChangedName="VEHICULERowChanged" msprop:Generator_TablePropName="VEHICULE" msprop:Generator_RowDeletingName="VEHICULERowDeleting" msprop:Generator_RowChangingName="VEHICULERowChanging" msprop:Generator_RowEvHandlerName="VEHICULERowChangeEventHandler" msprop:Generator_RowDeletedName="VEHICULERowDeleted" msprop:Generator_RowClassName="VEHICULERow" msprop:Generator_UserTableName="VEHICULE" msprop:Generator_RowEvArgName="VEHICULERowChangeEvent">
+        <xs:element name="VEHICULE" msprop:Generator_TableClassName="VEHICULEDataTable" msprop:Generator_TableVarName="tableVEHICULE" msprop:Generator_TablePropName="VEHICULE" msprop:Generator_RowDeletingName="VEHICULERowDeleting" msprop:Generator_RowChangingName="VEHICULERowChanging" msprop:Generator_RowEvHandlerName="VEHICULERowChangeEventHandler" msprop:Generator_RowDeletedName="VEHICULERowDeleted" msprop:Generator_UserTableName="VEHICULE" msprop:Generator_RowChangedName="VEHICULERowChanged" msprop:Generator_RowEvArgName="VEHICULERowChangeEvent" msprop:Generator_RowClassName="VEHICULERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="VEHIMMAT" msprop:Generator_ColumnVarNameInTable="columnVEHIMMAT" msprop:Generator_ColumnPropNameInRow="VEHIMMAT" msprop:Generator_ColumnPropNameInTable="VEHIMMATColumn" msprop:Generator_UserColumnName="VEHIMMAT">
@@ -783,7 +834,7 @@ FROM            U_MESGUEN.AC11</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TRNNUM" msprop:Generator_ColumnVarNameInTable="columnTRNNUM" msprop:Generator_ColumnPropNameInRow="TRNNUM" msprop:Generator_ColumnPropNameInTable="TRNNUMColumn" msprop:Generator_UserColumnName="TRNNUM">
@@ -823,6 +874,45 @@ FROM            U_MESGUEN.AC11</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ETAPE_ARRIVER" msprop:Generator_ColumnVarNameInTable="columnETAPE_ARRIVER" msprop:Generator_ColumnPropNameInRow="ETAPE_ARRIVER" msprop:Generator_ColumnPropNameInTable="ETAPE_ARRIVERColumn" msprop:Generator_UserColumnName="ETAPE_ARRIVER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AC12CHF" msprop:Generator_TableClassName="AC12CHFDataTable" msprop:Generator_TableVarName="tableAC12CHF" msprop:Generator_TablePropName="AC12CHF" msprop:Generator_RowDeletingName="AC12CHFRowDeleting" msprop:Generator_RowChangingName="AC12CHFRowChanging" msprop:Generator_RowEvHandlerName="AC12CHFRowChangeEventHandler" msprop:Generator_RowDeletedName="AC12CHFRowDeleted" msprop:Generator_UserTableName="AC12CHF" msprop:Generator_RowChangedName="AC12CHFRowChanged" msprop:Generator_RowEvArgName="AC12CHFRowChangeEvent" msprop:Generator_RowClassName="AC12CHFRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CHFNOM" msprop:Generator_ColumnVarNameInTable="columnCHFNOM" msprop:Generator_ColumnPropNameInRow="CHFNOM" msprop:Generator_ColumnPropNameInTable="CHFNOMColumn" msprop:Generator_UserColumnName="CHFNOM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AC12INMMAT" msprop:Generator_TableClassName="AC12INMMATDataTable" msprop:Generator_TableVarName="tableAC12INMMAT" msprop:Generator_TablePropName="AC12INMMAT" msprop:Generator_RowDeletingName="AC12INMMATRowDeleting" msprop:Generator_RowChangingName="AC12INMMATRowChanging" msprop:Generator_RowEvHandlerName="AC12INMMATRowChangeEventHandler" msprop:Generator_RowDeletedName="AC12INMMATRowDeleted" msprop:Generator_UserTableName="AC12INMMAT" msprop:Generator_RowChangedName="AC12INMMATRowChanged" msprop:Generator_RowEvArgName="AC12INMMATRowChangeEvent" msprop:Generator_RowClassName="AC12INMMATRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VEHIMMAT" msprop:Generator_ColumnVarNameInTable="columnVEHIMMAT" msprop:Generator_ColumnPropNameInRow="VEHIMMAT" msprop:Generator_ColumnPropNameInTable="VEHIMMATColumn" msprop:Generator_UserColumnName="VEHIMMAT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AC12REMMAT" msprop:Generator_TableClassName="AC12REMMATDataTable" msprop:Generator_TableVarName="tableAC12REMMAT" msprop:Generator_TablePropName="AC12REMMAT" msprop:Generator_RowDeletingName="AC12REMMATRowDeleting" msprop:Generator_RowChangingName="AC12REMMATRowChanging" msprop:Generator_RowEvHandlerName="AC12REMMATRowChangeEventHandler" msprop:Generator_RowDeletedName="AC12REMMATRowDeleted" msprop:Generator_UserTableName="AC12REMMAT" msprop:Generator_RowChangedName="AC12REMMATRowChanged" msprop:Generator_RowEvArgName="AC12REMMATRowChangeEvent" msprop:Generator_RowClassName="AC12REMMATRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REMMAT" msprop:Generator_ColumnVarNameInTable="columnREMMAT" msprop:Generator_ColumnPropNameInRow="REMMAT" msprop:Generator_ColumnPropNameInTable="REMMATColumn" msprop:Generator_UserColumnName="REMMAT">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="32" />
@@ -874,6 +964,14 @@ FROM            U_MESGUEN.AC11</CommandText>
     <xs:unique name="VEHICULE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:VEHICULE" />
       <xs:field xpath="mstns:VEHIMMAT" />
+    </xs:unique>
+    <xs:unique name="AC12INMMAT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AC12INMMAT" />
+      <xs:field xpath="mstns:VEHIMMAT" />
+    </xs:unique>
+    <xs:unique name="AC12REMMAT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AC12REMMAT" />
+      <xs:field xpath="mstns:REMMAT" />
     </xs:unique>
   </xs:element>
 </xs:schema>
