@@ -67,6 +67,22 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12CHFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12INMMATDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12REMMATDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12ETPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:WindowsApplication5.DataSet1.CHAUFFEURRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -111,6 +127,22 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12CHFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12INMMATRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12REMMATRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12ETPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:WindowsApplication5.DataSet1.CHAUFFEURRowChangeEvent">
 	<summary>
 Row event argument class
@@ -152,6 +184,22 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:WindowsApplication5.DataSet1.DataTable1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12CHFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12INMMATRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12REMMATRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1.AC12ETPRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -200,6 +248,22 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:WindowsApplication5.DataSet1TableAdapters.DataTable1TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1TableAdapters.AC12CHFTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1TableAdapters.AC12INMMATTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1TableAdapters.AC12REMMATTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication5.DataSet1TableAdapters.AC12ETPTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
