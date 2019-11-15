@@ -138,7 +138,8 @@ Partial Class AC13
         '
         'AC13_DateTimePicker_RDV
         '
-        Me.AC13_DateTimePicker_RDV.CustomFormat = "dd/MM/yy H:mm:s"
+        Me.AC13_DateTimePicker_RDV.AllowDrop = True
+        Me.AC13_DateTimePicker_RDV.CustomFormat = "dd/M/yy hh:mm:ss"
         Me.AC13_DateTimePicker_RDV.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.AC13_DateTimePicker_RDV.Location = New System.Drawing.Point(134, 119)
         Me.AC13_DateTimePicker_RDV.Name = "AC13_DateTimePicker_RDV"
@@ -147,7 +148,7 @@ Partial Class AC13
         '
         'AC13_DateTimePicker_RDV2
         '
-        Me.AC13_DateTimePicker_RDV2.CustomFormat = "dd/MM/yy H:mm:s"
+        Me.AC13_DateTimePicker_RDV2.CustomFormat = "dd/M/yy hh:mm:ss"
         Me.AC13_DateTimePicker_RDV2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.AC13_DateTimePicker_RDV2.Location = New System.Drawing.Point(134, 175)
         Me.AC13_DateTimePicker_RDV2.Name = "AC13_DateTimePicker_RDV2"
@@ -181,7 +182,7 @@ Partial Class AC13
         '
         'AC13_DateTimePicker_PEC
         '
-        Me.AC13_DateTimePicker_PEC.CustomFormat = "dd/MM/yy H:mm:s"
+        Me.AC13_DateTimePicker_PEC.CustomFormat = "dd/M/yy hh:mm:ss"
         Me.AC13_DateTimePicker_PEC.Enabled = False
         Me.AC13_DateTimePicker_PEC.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.AC13_DateTimePicker_PEC.Location = New System.Drawing.Point(134, 229)
