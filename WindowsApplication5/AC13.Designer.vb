@@ -194,7 +194,7 @@ Partial Class AC13
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.YellowGreen
+        Me.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.ClientSize = New System.Drawing.Size(695, 444)
         Me.Controls.Add(Me.AC13_DateTimePicker_PEC)
         Me.Controls.Add(Me.AC13_Label_PEC)
