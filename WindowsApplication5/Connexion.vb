@@ -37,7 +37,7 @@
             MessageBox.Show("Connexion Échouée")
         End If
 
-        myConnection.Close()
+        'myConnection.Close()
     End Sub
 
     Private Sub Connexion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
