@@ -114,3 +114,7 @@ G:\EasyPHP17\eds-www\PREPROD_V2.0\WindowsApplication5\obj\x86\Debug\WindowsAppli
 G:\EasyPHP17\eds-www\PREPROD_V2.0\WindowsApplication5\obj\x86\Debug\WindowsApplication5.Resources.resources
 G:\EasyPHP17\eds-www\PREPROD_V2.0\WindowsApplication5\obj\x86\Debug\WindowsApplication5.choixChauffeur.resources
 G:\EasyPHP17\eds-www\PREPROD_V2.0\WindowsApplication5\obj\x86\Debug\WindowsApplication5.vbproj.GenerateResource.Cache
+F:\18eallanic\REPOSITORIES\PPE3\WindowsApplication5\bin\Debug\WindowsApplication5.exe.config
+F:\18eallanic\REPOSITORIES\PPE3\WindowsApplication5\obj\x86\Debug\WindowsApplication5.exe
+F:\18eallanic\REPOSITORIES\PPE3\WindowsApplication5\obj\x86\Debug\WindowsApplication5.xml
+F:\18eallanic\REPOSITORIES\PPE3\WindowsApplication5\obj\x86\Debug\WindowsApplication5.pdb
