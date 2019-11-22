@@ -54,6 +54,7 @@
         Dim monCommentaire As String
         monCommentaire = Me.AC13_RichTextBox_Commentaire.Text
         Dim requete As String = "INSERT INTO ETAPE(TRNNUM, LIEUID, ETPHREDEBUT, ETPHREFIN, ETPCOMMENTAIRE) VALUES ('1','" & monLieu & "',TO_DATE('" & monRDV & "', 'DD/MM/YYYY HH24:MI:SS'),TO_DATE('" & monRDV2 & "', 'DD/MM/YYYY HH24:MI:SS'),'" & monCommentaire & "');"
+
         myCommand = New Odbc.OdbcCommand(requete, myConnection)
         MessageBox.Show(requete)
         myCommand.ExecuteScalar()

@@ -50,11 +50,11 @@ Partial Class AC13
         '
         Me.AC13_Label_Title.AutoSize = True
         Me.AC13_Label_Title.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AC13_Label_Title.Location = New System.Drawing.Point(234, 9)
+        Me.AC13_Label_Title.Location = New System.Drawing.Point(193, 20)
         Me.AC13_Label_Title.Name = "AC13_Label_Title"
-        Me.AC13_Label_Title.Size = New System.Drawing.Size(181, 24)
+        Me.AC13_Label_Title.Size = New System.Drawing.Size(254, 24)
         Me.AC13_Label_Title.TabIndex = 0
-        Me.AC13_Label_Title.Text = "MESGUEN - AC13"
+        Me.AC13_Label_Title.Text = "MESGUEN - AC13 Ajouter"
         '
         'AC13_Label_Lieu
         '
@@ -195,7 +195,7 @@ Partial Class AC13
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.ClientSize = New System.Drawing.Size(695, 444)
+        Me.ClientSize = New System.Drawing.Size(655, 444)
         Me.Controls.Add(Me.AC13_DateTimePicker_PEC)
         Me.Controls.Add(Me.AC13_Label_PEC)
         Me.Controls.Add(Me.AC13_RichTextBox_Commentaire)

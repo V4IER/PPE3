@@ -108,6 +108,7 @@
     <Compile Include="Connexion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="module_general.vb" />
     <Compile Include="Vehicule.vb" />
     <Compile Include="Employe.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

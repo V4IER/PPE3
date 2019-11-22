@@ -151,11 +151,11 @@ Partial Class AC13M
         '
         Me.AC13M_Label_Title.AutoSize = True
         Me.AC13M_Label_Title.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AC13M_Label_Title.Location = New System.Drawing.Point(119, 29)
+        Me.AC13M_Label_Title.Location = New System.Drawing.Point(93, 29)
         Me.AC13M_Label_Title.Name = "AC13M_Label_Title"
-        Me.AC13M_Label_Title.Size = New System.Drawing.Size(181, 24)
+        Me.AC13M_Label_Title.Size = New System.Drawing.Size(262, 24)
         Me.AC13M_Label_Title.TabIndex = 13
-        Me.AC13M_Label_Title.Text = "MESGUEN - AC13"
+        Me.AC13M_Label_Title.Text = "MESGUEN - AC13 Modifier"
         '
         'AC13M
         '
