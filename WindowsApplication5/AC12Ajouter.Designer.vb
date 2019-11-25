@@ -36,27 +36,30 @@ Partial Class AC12Ajouter
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.AC12RMQ = New System.Windows.Forms.Label()
         Me.boxRemorque = New System.Windows.Forms.ComboBox()
+        Me.AC12REMMATBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApplication5.DataSet1()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.AC12VEH = New System.Windows.Forms.Label()
         Me.boxVehicule = New System.Windows.Forms.ComboBox()
+        Me.AC12INMMATBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.chauffeur = New System.Windows.Forms.Label()
         Me.boxCommentaire = New System.Windows.Forms.TextBox()
         Me.boxChauffeur = New System.Windows.Forms.ComboBox()
-        Me.DataSet1 = New WindowsApplication5.DataSet1()
+        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AC12CHFBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AC12CHFTableAdapter = New WindowsApplication5.DataSet1TableAdapters.AC12CHFTableAdapter()
-        Me.AC12INMMATBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AC12INMMATTableAdapter = New WindowsApplication5.DataSet1TableAdapters.AC12INMMATTableAdapter()
-        Me.AC12REMMATBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AC12REMMATTableAdapter = New WindowsApplication5.DataSet1TableAdapters.AC12REMMATTableAdapter()
+        Me.DataTable2TableAdapter = New WindowsApplication5.DataSet1TableAdapters.DataTable2TableAdapter()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AC12CHFBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AC12REMMATBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AC12CHFBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -164,7 +167,7 @@ Partial Class AC12Ajouter
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd  hh:mm:ss"
+        Me.DateTimePicker1.CustomFormat = "dd/M/yy hh:mm:ss"
         Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(9, 216)
@@ -193,6 +196,16 @@ Partial Class AC12Ajouter
         Me.boxRemorque.TabIndex = 13
         Me.boxRemorque.ValueMember = "REMMAT"
         '
+        'AC12REMMATBindingSource
+        '
+        Me.AC12REMMATBindingSource.DataMember = "AC12REMMAT"
+        Me.AC12REMMATBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -205,7 +218,7 @@ Partial Class AC12Ajouter
         '
         'DateTimePicker3
         '
-        Me.DateTimePicker3.CustomFormat = "yyyy-MM-dd  H:mm:ss"
+        Me.DateTimePicker3.CustomFormat = "dd/M/yy hh:mm:ss"
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker3.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.DateTimePicker3.Location = New System.Drawing.Point(9, 37)
@@ -235,6 +248,11 @@ Partial Class AC12Ajouter
         Me.boxVehicule.TabIndex = 8
         Me.boxVehicule.ValueMember = "VEHIMMAT"
         '
+        'AC12INMMATBindingSource
+        '
+        Me.AC12INMMATBindingSource.DataMember = "AC12INMMAT"
+        Me.AC12INMMATBindingSource.DataSource = Me.DataSet1
+        '
         'chauffeur
         '
         Me.chauffeur.AutoSize = True
@@ -255,19 +273,19 @@ Partial Class AC12Ajouter
         '
         'boxChauffeur
         '
-        Me.boxChauffeur.DataSource = Me.AC12CHFBindingSource
+        Me.boxChauffeur.DataSource = Me.DataTable2BindingSource
         Me.boxChauffeur.DisplayMember = "CHFNOM"
         Me.boxChauffeur.FormattingEnabled = True
         Me.boxChauffeur.Location = New System.Drawing.Point(9, 81)
         Me.boxChauffeur.Name = "boxChauffeur"
         Me.boxChauffeur.Size = New System.Drawing.Size(241, 21)
         Me.boxChauffeur.TabIndex = 3
-        Me.boxChauffeur.ValueMember = "CHFNOM"
+        Me.boxChauffeur.ValueMember = "CHFID"
         '
-        'DataSet1
+        'DataTable2BindingSource
         '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DataTable2BindingSource.DataMember = "DataTable2"
+        Me.DataTable2BindingSource.DataSource = Me.DataSet1
         '
         'AC12CHFBindingSource
         '
@@ -278,23 +296,17 @@ Partial Class AC12Ajouter
         '
         Me.AC12CHFTableAdapter.ClearBeforeFill = True
         '
-        'AC12INMMATBindingSource
-        '
-        Me.AC12INMMATBindingSource.DataMember = "AC12INMMAT"
-        Me.AC12INMMATBindingSource.DataSource = Me.DataSet1
-        '
         'AC12INMMATTableAdapter
         '
         Me.AC12INMMATTableAdapter.ClearBeforeFill = True
         '
-        'AC12REMMATBindingSource
-        '
-        Me.AC12REMMATBindingSource.DataMember = "AC12REMMAT"
-        Me.AC12REMMATBindingSource.DataSource = Me.DataSet1
-        '
         'AC12REMMATTableAdapter
         '
         Me.AC12REMMATTableAdapter.ClearBeforeFill = True
+        '
+        'DataTable2TableAdapter
+        '
+        Me.DataTable2TableAdapter.ClearBeforeFill = True
         '
         'AC12Ajouter
         '
@@ -312,10 +324,11 @@ Partial Class AC12Ajouter
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AC12CHFBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AC12REMMATBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AC12CHFBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -347,4 +360,6 @@ Partial Class AC12Ajouter
     Friend WithEvents AC12INMMATTableAdapter As WindowsApplication5.DataSet1TableAdapters.AC12INMMATTableAdapter
     Friend WithEvents AC12REMMATBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents AC12REMMATTableAdapter As WindowsApplication5.DataSet1TableAdapters.AC12REMMATTableAdapter
+    Friend WithEvents DataTable2BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DataTable2TableAdapter As WindowsApplication5.DataSet1TableAdapters.DataTable2TableAdapter
 End Class

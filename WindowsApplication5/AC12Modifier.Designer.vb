@@ -22,6 +22,7 @@ Partial Class AC12Modifier
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.modifier = New System.Windows.Forms.Button()
         Me.suppr = New System.Windows.Forms.Button()
@@ -36,24 +37,44 @@ Partial Class AC12Modifier
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.AC12RMQ = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.AC12REMMATBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApplication5.DataSet1()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.AC12VEH = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.AC12INMMATBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.chauffeur = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DataTable2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AC11ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.AC12CHFBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AC12CHFTableAdapter = New WindowsApplication5.DataSet1TableAdapters.AC12CHFTableAdapter()
+        Me.DataTable2TableAdapter = New WindowsApplication5.DataSet1TableAdapters.DataTable2TableAdapter()
+        Me.AC12INMMATTableAdapter = New WindowsApplication5.DataSet1TableAdapters.AC12INMMATTableAdapter()
+        Me.AC12REMMATTableAdapter = New WindowsApplication5.DataSet1TableAdapters.AC12REMMATTableAdapter()
+        Me.DataTable4BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataTable4TableAdapter = New WindowsApplication5.DataSet1TableAdapters.DataTable4TableAdapter()
+        Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.AC12REMMATBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.AC12CHFBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable4BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FillByToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -65,7 +86,7 @@ Partial Class AC12Modifier
         Me.GroupBox2.Controls.Add(Me.etapes)
         Me.GroupBox2.Location = New System.Drawing.Point(265, 90)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(322, 398)
+        Me.GroupBox2.Size = New System.Drawing.Size(336, 412)
         Me.GroupBox2.TabIndex = 29
         Me.GroupBox2.TabStop = False
         '
@@ -91,10 +112,13 @@ Partial Class AC12Modifier
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(6, 49)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(310, 187)
         Me.DataGridView1.TabIndex = 19
         '
@@ -202,6 +226,7 @@ Partial Class AC12Modifier
         '
         'ComboBox3
         '
+        Me.ComboBox3.DataSource = Me.AC12REMMATBindingSource
         Me.ComboBox3.DisplayMember = "REMMAT"
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Location = New System.Drawing.Point(9, 171)
@@ -209,6 +234,16 @@ Partial Class AC12Modifier
         Me.ComboBox3.Size = New System.Drawing.Size(200, 21)
         Me.ComboBox3.TabIndex = 13
         Me.ComboBox3.ValueMember = "REMMAT"
+        '
+        'AC12REMMATBindingSource
+        '
+        Me.AC12REMMATBindingSource.DataMember = "AC12REMMAT"
+        Me.AC12REMMATBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -243,6 +278,7 @@ Partial Class AC12Modifier
         '
         'ComboBox2
         '
+        Me.ComboBox2.DataSource = Me.AC12INMMATBindingSource
         Me.ComboBox2.DisplayMember = "VEHIMMAT"
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(9, 126)
@@ -250,6 +286,11 @@ Partial Class AC12Modifier
         Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
         Me.ComboBox2.TabIndex = 8
         Me.ComboBox2.ValueMember = "VEHIMMAT"
+        '
+        'AC12INMMATBindingSource
+        '
+        Me.AC12INMMATBindingSource.DataMember = "AC12INMMAT"
+        Me.AC12INMMATBindingSource.DataSource = Me.DataSet1
         '
         'chauffeur
         '
@@ -271,13 +312,19 @@ Partial Class AC12Modifier
         '
         'ComboBox1
         '
+        Me.ComboBox1.DataSource = Me.DataTable2BindingSource
         Me.ComboBox1.DisplayMember = "CHFNOM"
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(9, 81)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
         Me.ComboBox1.TabIndex = 3
-        Me.ComboBox1.ValueMember = "CHFNOM"
+        Me.ComboBox1.ValueMember = "CHFID"
+        '
+        'DataTable2BindingSource
+        '
+        Me.DataTable2BindingSource.DataMember = "DataTable2"
+        Me.DataTable2BindingSource.DataSource = Me.DataSet1
         '
         'Panel1
         '
@@ -289,6 +336,14 @@ Partial Class AC12Modifier
         Me.Panel1.Size = New System.Drawing.Size(575, 19)
         Me.Panel1.TabIndex = 30
         Me.Panel1.Tag = ""
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(340, 4)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
+        Me.Label3.TabIndex = 1
         '
         'Label2
         '
@@ -304,7 +359,7 @@ Partial Class AC12Modifier
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AC11ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(598, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(601, 24)
         Me.MenuStrip1.TabIndex = 31
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -318,22 +373,61 @@ Partial Class AC12Modifier
         'HomeToolStripMenuItem
         '
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.HomeToolStripMenuItem.Text = "Home"
         '
-        'Label3
+        'AC12CHFBindingSource
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(340, 4)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 13)
-        Me.Label3.TabIndex = 1
+        Me.AC12CHFBindingSource.DataMember = "AC12CHF"
+        Me.AC12CHFBindingSource.DataSource = Me.DataSet1
+        '
+        'AC12CHFTableAdapter
+        '
+        Me.AC12CHFTableAdapter.ClearBeforeFill = True
+        '
+        'DataTable2TableAdapter
+        '
+        Me.DataTable2TableAdapter.ClearBeforeFill = True
+        '
+        'AC12INMMATTableAdapter
+        '
+        Me.AC12INMMATTableAdapter.ClearBeforeFill = True
+        '
+        'AC12REMMATTableAdapter
+        '
+        Me.AC12REMMATTableAdapter.ClearBeforeFill = True
+        '
+        'DataTable4BindingSource
+        '
+        Me.DataTable4BindingSource.DataMember = "DataTable4"
+        Me.DataTable4BindingSource.DataSource = Me.DataSet1
+        '
+        'DataTable4TableAdapter
+        '
+        Me.DataTable4TableAdapter.ClearBeforeFill = True
+        '
+        'FillByToolStrip
+        '
+        Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
+        Me.FillByToolStrip.Location = New System.Drawing.Point(0, 24)
+        Me.FillByToolStrip.Name = "FillByToolStrip"
+        Me.FillByToolStrip.Size = New System.Drawing.Size(601, 25)
+        Me.FillByToolStrip.TabIndex = 32
+        Me.FillByToolStrip.Text = "FillByToolStrip"
+        '
+        'FillByToolStripButton
+        '
+        Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillByToolStripButton.Name = "FillByToolStripButton"
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 22)
+        Me.FillByToolStripButton.Text = "FillBy"
         '
         'AC12Modifier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(598, 498)
+        Me.ClientSize = New System.Drawing.Size(601, 502)
+        Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox2)
@@ -345,10 +439,18 @@ Partial Class AC12Modifier
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.AC12REMMATBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.AC12CHFBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable4BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FillByToolStrip.ResumeLayout(False)
+        Me.FillByToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -380,4 +482,17 @@ Partial Class AC12Modifier
     Friend WithEvents AC11ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents DataSet1 As WindowsApplication5.DataSet1
+    Friend WithEvents AC12CHFBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents AC12CHFTableAdapter As WindowsApplication5.DataSet1TableAdapters.AC12CHFTableAdapter
+    Friend WithEvents DataTable2BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DataTable2TableAdapter As WindowsApplication5.DataSet1TableAdapters.DataTable2TableAdapter
+    Friend WithEvents AC12INMMATBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents AC12INMMATTableAdapter As WindowsApplication5.DataSet1TableAdapters.AC12INMMATTableAdapter
+    Friend WithEvents AC12REMMATBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents AC12REMMATTableAdapter As WindowsApplication5.DataSet1TableAdapters.AC12REMMATTableAdapter
+    Friend WithEvents DataTable4BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DataTable4TableAdapter As WindowsApplication5.DataSet1TableAdapters.DataTable4TableAdapter
+    Friend WithEvents FillByToolStrip As System.Windows.Forms.ToolStrip
+    Friend WithEvents FillByToolStripButton As System.Windows.Forms.ToolStripButton
 End Class

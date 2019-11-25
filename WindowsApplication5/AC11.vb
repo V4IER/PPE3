@@ -1,5 +1,5 @@
 ﻿Public Class AC11
-
+    Dim myConnection As New Odbc.OdbcConnection
     Dim myCommand As New Odbc.OdbcCommand
     Private Sub AC11_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable1'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
@@ -41,6 +41,6 @@
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         TRNNUM = Convert.ToString(DataGridView1.CurrentRow.Cells.Item(0).Value)
         AC12Modifier.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class

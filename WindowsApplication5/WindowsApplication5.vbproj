@@ -87,6 +87,18 @@
     <Compile Include="AC12Modifier.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AC13A.Designer.vb">
+      <DependentUpon>AC13A.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AC13A.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AC13M.Designer.vb">
+      <DependentUpon>AC13M.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AC13M.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AC12Modifier.resx">
       <DependentUpon>AC12Modifier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AC13A.resx">
+      <DependentUpon>AC13A.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AC13M.resx">
+      <DependentUpon>AC13M.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.vb</DependentUpon>

@@ -6,7 +6,7 @@
     Dim myAdapter As Odbc.OdbcDataAdapter
     Dim myBuilder As Odbc.OdbcCommandBuilder
     Dim connString As String
-    Dim donnee As Collection
+    'Dim donnee As Collection
 
     Private Sub Submit_Click(sender As System.Object, e As System.EventArgs) Handles Submit.Click
         'Dim hostAddress = "10.0.122.107"
@@ -19,25 +19,28 @@
         myConnection.ConnectionString = connString
         myConnection.Open()
 
-        Dim query As String = "SELECT emplLoggin, emplMdp FROM employe WHERE emplLoggin='" & Username.Text & "' AND emplMdp='" & Password.Text & "'"
-        donnee = New Collection
+        Dim query As String = "SELECT count(*) FROM employe WHERE emplLoggin='" & Username.Text & "' AND emplMdp='" & Password.Text & "'"
+        'donnee = New Collection
 
-        myCommand.Connection = myConnection
-        myCommand.CommandText = query
-        myReader = myCommand.ExecuteReader
+        Dim commande As New Odbc.OdbcCommand(query, myConnection)
+        Dim result As Integer = commande.ExecuteScalar()
 
-        While myReader.Read
-            donnee.Add(myReader.GetString(0))
-        End While
+        'myCommand.Connection = myConnection
+        'myCommand.CommandText = query
+        'myReader = myCommand.ExecuteReader
 
-        If donnee.Count > 0 Then
-            Me.Hide()
+        'While myReader.Read
+        'donnee.Add(myReader.GetString(0))
+        'End While
+
+        If result = 1 Then
             AC11.Show()
+            Me.Hide()
         Else
             MessageBox.Show("Connexion Échouée")
         End If
 
-        myConnection.Close()
+        'myConnection.Close()
     End Sub
 
     Private Sub Connexion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
