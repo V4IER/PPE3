@@ -24,6 +24,17 @@ Partial Class AC12Modifier
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.CASSEIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CASSENOMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CASSEDATEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PICTUREURLDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CasseBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApplication5.DataSet1()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.modifier = New System.Windows.Forms.Button()
         Me.suppr = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -38,7 +49,6 @@ Partial Class AC12Modifier
         Me.AC12RMQ = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.AC12REMMATBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New WindowsApplication5.DataSet1()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.AC12VEH = New System.Windows.Forms.Label()
@@ -63,11 +73,14 @@ Partial Class AC12Modifier
         Me.DataTable4TableAdapter = New WindowsApplication5.DataSet1TableAdapters.DataTable4TableAdapter()
         Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
         Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.CasseTableAdapter = New WindowsApplication5.DataSet1TableAdapters.CasseTableAdapter()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CasseBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.AC12REMMATBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -79,6 +92,11 @@ Partial Class AC12Modifier
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.DataGridView2)
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.modifier)
         Me.GroupBox2.Controls.Add(Me.suppr)
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
@@ -86,16 +104,109 @@ Partial Class AC12Modifier
         Me.GroupBox2.Controls.Add(Me.etapes)
         Me.GroupBox2.Location = New System.Drawing.Point(265, 90)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(336, 412)
+        Me.GroupBox2.Size = New System.Drawing.Size(463, 412)
         Me.GroupBox2.TabIndex = 29
         Me.GroupBox2.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(279, 363)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 29)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "MODIFIER"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(66, 363)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(110, 29)
+        Me.Button2.TabIndex = 25
+        Me.Button2.Text = "SUPPRIMER"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CASSEIDDataGridViewTextBoxColumn, Me.CASSENOMDataGridViewTextBoxColumn, Me.CASSEDATEDataGridViewTextBoxColumn, Me.PICTUREURLDataGridViewTextBoxColumn})
+        Me.DataGridView2.DataSource = Me.CasseBindingSource
+        Me.DataGridView2.Location = New System.Drawing.Point(9, 260)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(444, 87)
+        Me.DataGridView2.TabIndex = 24
+        '
+        'CASSEIDDataGridViewTextBoxColumn
+        '
+        Me.CASSEIDDataGridViewTextBoxColumn.DataPropertyName = "CASSEID"
+        Me.CASSEIDDataGridViewTextBoxColumn.HeaderText = "CASSEID"
+        Me.CASSEIDDataGridViewTextBoxColumn.Name = "CASSEIDDataGridViewTextBoxColumn"
+        Me.CASSEIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CASSENOMDataGridViewTextBoxColumn
+        '
+        Me.CASSENOMDataGridViewTextBoxColumn.DataPropertyName = "CASSENOM"
+        Me.CASSENOMDataGridViewTextBoxColumn.HeaderText = "CASSENOM"
+        Me.CASSENOMDataGridViewTextBoxColumn.Name = "CASSENOMDataGridViewTextBoxColumn"
+        Me.CASSENOMDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CASSEDATEDataGridViewTextBoxColumn
+        '
+        Me.CASSEDATEDataGridViewTextBoxColumn.DataPropertyName = "CASSEDATE"
+        Me.CASSEDATEDataGridViewTextBoxColumn.HeaderText = "CASSEDATE"
+        Me.CASSEDATEDataGridViewTextBoxColumn.Name = "CASSEDATEDataGridViewTextBoxColumn"
+        Me.CASSEDATEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PICTUREURLDataGridViewTextBoxColumn
+        '
+        Me.PICTUREURLDataGridViewTextBoxColumn.DataPropertyName = "PICTUREURL"
+        Me.PICTUREURLDataGridViewTextBoxColumn.HeaderText = "PICTUREURL"
+        Me.PICTUREURLDataGridViewTextBoxColumn.Name = "PICTUREURLDataGridViewTextBoxColumn"
+        Me.PICTUREURLDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CasseBindingSource
+        '
+        Me.CasseBindingSource.DataMember = "Casse"
+        Me.CasseBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(182, 363)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(91, 29)
+        Me.Button3.TabIndex = 23
+        Me.Button3.Text = "AJOUTER"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(9, 227)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 18)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "Casse :"
         '
         'modifier
         '
         Me.modifier.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.modifier.Location = New System.Drawing.Point(206, 260)
+        Me.modifier.Location = New System.Drawing.Point(282, 183)
         Me.modifier.Name = "modifier"
-        Me.modifier.Size = New System.Drawing.Size(110, 29)
+        Me.modifier.Size = New System.Drawing.Size(94, 29)
         Me.modifier.TabIndex = 21
         Me.modifier.Text = "MODIFIER"
         Me.modifier.UseVisualStyleBackColor = True
@@ -103,7 +214,7 @@ Partial Class AC12Modifier
         'suppr
         '
         Me.suppr.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.suppr.Location = New System.Drawing.Point(9, 260)
+        Me.suppr.Location = New System.Drawing.Point(69, 183)
         Me.suppr.Name = "suppr"
         Me.suppr.Size = New System.Drawing.Size(110, 29)
         Me.suppr.TabIndex = 20
@@ -119,13 +230,13 @@ Partial Class AC12Modifier
         Me.DataGridView1.Location = New System.Drawing.Point(6, 49)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(310, 187)
+        Me.DataGridView1.Size = New System.Drawing.Size(447, 128)
         Me.DataGridView1.TabIndex = 19
         '
         'ajouter
         '
         Me.ajouter.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ajouter.Location = New System.Drawing.Point(225, 363)
+        Me.ajouter.Location = New System.Drawing.Point(185, 183)
         Me.ajouter.Name = "ajouter"
         Me.ajouter.Size = New System.Drawing.Size(91, 29)
         Me.ajouter.TabIndex = 18
@@ -239,11 +350,6 @@ Partial Class AC12Modifier
         '
         Me.AC12REMMATBindingSource.DataMember = "AC12REMMAT"
         Me.AC12REMMATBindingSource.DataSource = Me.DataSet1
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -359,7 +465,7 @@ Partial Class AC12Modifier
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AC11ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(601, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(735, 24)
         Me.MenuStrip1.TabIndex = 31
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -411,7 +517,7 @@ Partial Class AC12Modifier
         Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
         Me.FillByToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.FillByToolStrip.Name = "FillByToolStrip"
-        Me.FillByToolStrip.Size = New System.Drawing.Size(601, 25)
+        Me.FillByToolStrip.Size = New System.Drawing.Size(735, 25)
         Me.FillByToolStrip.TabIndex = 32
         Me.FillByToolStrip.Text = "FillByToolStrip"
         '
@@ -422,11 +528,15 @@ Partial Class AC12Modifier
         Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 22)
         Me.FillByToolStripButton.Text = "FillBy"
         '
+        'CasseTableAdapter
+        '
+        Me.CasseTableAdapter.ClearBeforeFill = True
+        '
         'AC12Modifier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(601, 502)
+        Me.ClientSize = New System.Drawing.Size(735, 502)
         Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
@@ -436,11 +546,13 @@ Partial Class AC12Modifier
         Me.Text = "AC12Modifier"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CasseBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.AC12REMMATBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AC12INMMATBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -495,4 +607,15 @@ Partial Class AC12Modifier
     Friend WithEvents DataTable4TableAdapter As WindowsApplication5.DataSet1TableAdapters.DataTable4TableAdapter
     Friend WithEvents FillByToolStrip As System.Windows.Forms.ToolStrip
     Friend WithEvents FillByToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents CasseBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CasseTableAdapter As WindowsApplication5.DataSet1TableAdapters.CasseTableAdapter
+    Friend WithEvents CASSEIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CASSENOMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CASSEDATEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PICTUREURLDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
