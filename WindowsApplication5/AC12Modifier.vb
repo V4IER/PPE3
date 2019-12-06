@@ -5,6 +5,7 @@
     Dim myBuilder As Odbc.OdbcCommandBuilder
     Dim myTRNNUM As Integer = TRNNUM
     Dim donnee4 As DataTable
+    Dim donnee5 As DataTable
 
     Private Sub Panel1_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
@@ -19,8 +20,8 @@
     End Sub
 
     Private Sub AC12Modifier_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'TODO: cette ligne de code charge les données dans la table 'DataSet1.Casse'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.CasseTableAdapter.Fill(Me.DataSet1.Casse)
+        'TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable6'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+        Me.DataTable6TableAdapter.Fill(Me.DataSet1.DataTable6)
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.DataTable4'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         Me.DataTable4TableAdapter.Fill(Me.DataSet1.DataTable4)
         'TODO: cette ligne de code charge les données dans la table 'DataSet1.AC12REMMAT'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
@@ -34,6 +35,15 @@
         Label3.Text = TRNNUM
         myCommand = New Odbc.OdbcCommand("SELECT * FROM TOURNEE WHERE TRNNUM = " & TRNNUM & ";", myConnection)
         ComboBox1.SelectedValue = TRNNUM
+
+
+        Dim maRequete As String = "SELECT ETPID, LIEUNOM FROM ETAPE, LIEU WHERE ETAPE.LIEUID = LIEU.LIEUID AND ETAPE.TRNNUM = " & TRNNUM & ";"
+        donnee5 = New DataTable
+        myAdapter = New Odbc.OdbcDataAdapter(maRequete, myConnection)
+        myBuilder = New Odbc.OdbcCommandBuilder(myAdapter)
+        myAdapter.Fill(donnee5)
+
+        Me.DataGridView1.DataSource = donnee5
 
     End Sub
 
@@ -52,7 +62,7 @@
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox1.TextChanged
-
+        Dim requet
     End Sub
 
     Private Sub modifier_Click(sender As System.Object, e As System.EventArgs) Handles modifier.Click
@@ -78,25 +88,7 @@
 
     End Sub
 
-    Private Sub Label4_Click(sender As System.Object, e As System.EventArgs) Handles Label4.Click
+    Private Sub FillByToolStrip_ItemClicked(sender As System.Object, e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles FillByToolStrip.ItemClicked
 
-    End Sub
-
-    Private Sub DataGridView2_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
-
-    End Sub
-
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        CasseAjout.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub AC12VALIDER_Click(sender As System.Object, e As System.EventArgs) Handles AC12VALIDER.Click
-
-    End Sub
-
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-        CasseAjout.Show()
-        Me.Close()
     End Sub
 End Class

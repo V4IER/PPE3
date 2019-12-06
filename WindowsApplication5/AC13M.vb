@@ -54,7 +54,7 @@
         monCommentaire = Me.AC13M_RichTextBox_Commentaire.Text
 
         'TODO : Ajouter les variables de AC12 pour TRNNUM et ETPID
-        Dim requete As String = "UPDATE ETAPE SET LIEUID ='" & monLieu & "',ETPHREDEBUT = TO_DATE('" & monRDV & "', 'DD/MM/YYYY HH24:MI:SS'),ETPHREFIN = TO_DATE('" & monRDV2 & "', 'DD/MM/YYYY HH24:MI:SS'),ETPCOMMENTAIRE = '" & monCommentaire & "' WHERE " & TRNNUM & " = 1 AND ETPID = 1;"
+        Dim requete As String = "UPDATE ETAPE SET LIEUID ='" & monLieu & "',ETPHREDEBUT = TO_DATE('" & monRDV & "', 'DD/MM/YYYY HH24:MI:SS'),ETPHREFIN = TO_DATE('" & monRDV2 & "', 'DD/MM/YYYY HH24:MI:SS'),ETPCOMMENTAIRE = '" & monCommentaire & "' WHERE TRNNUM = " & TRNNUM & "AND ETPID = 1;"
         myCommand = New Odbc.OdbcCommand(requete, myConnection)
         MessageBox.Show(requete)
         myCommand.ExecuteScalar()

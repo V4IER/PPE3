@@ -6,24 +6,7 @@ WindowsApplication5
 </name>
 </assembly>
 <members>
-<member name="P:WindowsApplication5.My.Resources.Resources.ResourceManager">
-	<summary>
-  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
-</summary>
-</member><member name="P:WindowsApplication5.My.Resources.Resources.Culture">
-	<summary>
-  Remplace la propriété CurrentUICulture du thread actuel pour toutes
-  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
-</summary>
-</member><member name="P:WindowsApplication5.My.Resources.Resources.Connexion">
-	<summary>
-  Recherche une ressource localisée de type System.Drawing.Bitmap.
-</summary>
-</member><member name="T:WindowsApplication5.My.Resources.Resources">
-	<summary>
-  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
-</summary>
-</member><member name="T:WindowsApplication5.DataSet1.CHAUFFEURDataTable">
+<member name="T:WindowsApplication5.DataSet1.CHAUFFEURDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -95,15 +78,11 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1.CasseDataTable">
+</member><member name="T:WindowsApplication5.DataSet1.DataTable5DataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1.CASSE_IDDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication5.DataSet1.CASSE_NOMDataTable">
+</member><member name="T:WindowsApplication5.DataSet1.DataTable6DataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -179,15 +158,11 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1.CasseRow">
+</member><member name="T:WindowsApplication5.DataSet1.DataTable5Row">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1.CASSE_IDRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication5.DataSet1.CASSE_NOMRow">
+</member><member name="T:WindowsApplication5.DataSet1.DataTable6Row">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -263,15 +238,11 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1.CasseRowChangeEvent">
+</member><member name="T:WindowsApplication5.DataSet1.DataTable5RowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1.CASSE_IDRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication5.DataSet1.CASSE_NOMRowChangeEvent">
+</member><member name="T:WindowsApplication5.DataSet1.DataTable6RowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -351,15 +322,11 @@ Represents the connection and commands used to retrieve and save data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1TableAdapters.CasseTableAdapter">
+</member><member name="T:WindowsApplication5.DataSet1TableAdapters.DataTable5TableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:WindowsApplication5.DataSet1TableAdapters.CASSE_IDTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:WindowsApplication5.DataSet1TableAdapters.CASSE_NOMTableAdapter">
+</member><member name="T:WindowsApplication5.DataSet1TableAdapters.DataTable6TableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -606,6 +573,23 @@ Used to sort self-referenced table's rows
 </member><member name="T:WindowsApplication5.MESGUENTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:WindowsApplication5.My.Resources.Resources.ResourceManager">
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member><member name="P:WindowsApplication5.My.Resources.Resources.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member><member name="P:WindowsApplication5.My.Resources.Resources.Connexion">
+	<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:WindowsApplication5.My.Resources.Resources">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
 </summary>
 </member>
 </members>

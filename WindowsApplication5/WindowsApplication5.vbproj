@@ -99,12 +99,6 @@
     <Compile Include="AC13M.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CasseAjout.Designer.vb">
-      <DependentUpon>CasseAjout.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CasseAjout.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,6 +109,9 @@
     </Compile>
     <Compile Include="AC12Ajouter.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Lieu.vb" />
     <Compile Include="Connexion.Designer.vb">
@@ -165,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AC13M.resx">
       <DependentUpon>AC13M.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CasseAjout.resx">
-      <DependentUpon>CasseAjout.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.vb</DependentUpon>
