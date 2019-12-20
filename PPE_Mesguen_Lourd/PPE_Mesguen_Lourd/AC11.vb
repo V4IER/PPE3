@@ -45,4 +45,12 @@
         AC12_Ajouter.Show()
         Me.Close()
     End Sub
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub LabelTournee_Click(sender As System.Object, e As System.EventArgs)
+
+    End Sub
 End Class

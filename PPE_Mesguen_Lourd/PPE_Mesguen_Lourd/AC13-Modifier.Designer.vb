@@ -34,14 +34,18 @@ Partial Class AC13_Modifier
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Valider = New System.Windows.Forms.Button()
         Me.Retour = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Afficher = New System.Windows.Forms.Button()
         Me.Supprimer = New System.Windows.Forms.Button()
         Me.GrillesPhotos = New System.Windows.Forms.DataGridView()
         Me.PhotoPB = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.GrillesPhotos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PhotoPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -163,17 +167,6 @@ Partial Class AC13_Modifier
         Me.Retour.Text = "Retour"
         Me.Retour.UseVisualStyleBackColor = False
         '
-        'Label6
-        '
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(0, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(936, 32)
-        Me.Label6.TabIndex = 31
-        Me.Label6.Text = "AC13 - Modifier une étape"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -188,7 +181,7 @@ Partial Class AC13_Modifier
         '
         Me.Afficher.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Afficher.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Afficher.Location = New System.Drawing.Point(455, 102)
+        Me.Afficher.Location = New System.Drawing.Point(806, 93)
         Me.Afficher.Name = "Afficher"
         Me.Afficher.Size = New System.Drawing.Size(118, 49)
         Me.Afficher.TabIndex = 33
@@ -199,7 +192,7 @@ Partial Class AC13_Modifier
         '
         Me.Supprimer.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Supprimer.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Supprimer.Location = New System.Drawing.Point(455, 239)
+        Me.Supprimer.Location = New System.Drawing.Point(806, 148)
         Me.Supprimer.Name = "Supprimer"
         Me.Supprimer.Size = New System.Drawing.Size(118, 49)
         Me.Supprimer.TabIndex = 34
@@ -214,7 +207,7 @@ Partial Class AC13_Modifier
         Me.GrillesPhotos.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.GrillesPhotos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GrillesPhotos.GridColor = System.Drawing.SystemColors.Control
-        Me.GrillesPhotos.Location = New System.Drawing.Point(579, 102)
+        Me.GrillesPhotos.Location = New System.Drawing.Point(455, 93)
         Me.GrillesPhotos.Name = "GrillesPhotos"
         Me.GrillesPhotos.ReadOnly = True
         Me.GrillesPhotos.Size = New System.Drawing.Size(345, 186)
@@ -222,25 +215,54 @@ Partial Class AC13_Modifier
         '
         'PhotoPB
         '
-        Me.PhotoPB.Location = New System.Drawing.Point(579, 294)
+        Me.PhotoPB.Location = New System.Drawing.Point(455, 295)
         Me.PhotoPB.Name = "PhotoPB"
-        Me.PhotoPB.Size = New System.Drawing.Size(252, 151)
+        Me.PhotoPB.Size = New System.Drawing.Size(345, 202)
         Me.PhotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PhotoPB.TabIndex = 37
         Me.PhotoPB.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.YellowGreen
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Location = New System.Drawing.Point(19, 11)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(889, 31)
+        Me.Panel1.TabIndex = 38
+        Me.Panel1.Tag = ""
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.YellowGreen
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Location = New System.Drawing.Point(81, 6)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(743, 19)
+        Me.Panel2.TabIndex = 3
+        Me.Panel2.Tag = ""
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(260, 3)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(139, 13)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "AC12 - Modifier une tournée"
         '
         'AC13_Modifier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.YellowGreen
+        Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(936, 513)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PhotoPB)
         Me.Controls.Add(Me.GrillesPhotos)
         Me.Controls.Add(Me.Supprimer)
         Me.Controls.Add(Me.Afficher)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Retour)
         Me.Controls.Add(Me.Valider)
         Me.Controls.Add(Me.TextBox2)
@@ -257,6 +279,9 @@ Partial Class AC13_Modifier
         Me.Text = "AC13-Ajouter"
         CType(Me.GrillesPhotos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PhotoPB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -273,10 +298,12 @@ Partial Class AC13_Modifier
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Valider As System.Windows.Forms.Button
     Friend WithEvents Retour As System.Windows.Forms.Button
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Afficher As System.Windows.Forms.Button
     Friend WithEvents Supprimer As System.Windows.Forms.Button
     Friend WithEvents GrillesPhotos As System.Windows.Forms.DataGridView
     Friend WithEvents PhotoPB As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class
